@@ -9,7 +9,7 @@ const fs = require('fs');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS] });
 
 const wordList = fs.readFileSync("./wordtest.txt").toString('utf-8');
-const words = wordList.split(',');
+const words = wordList.split('\n');
 
 const genWord = () => {
     const wordFinal = words[random.int(0, words.length)].toUpperCase();
